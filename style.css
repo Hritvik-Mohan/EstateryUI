@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --body-font-family: 'Roboto', sans-serif;
+    --accent-color: #7166F0;
+    --background-color: #F8F7FD;
+    --grey: #9F9EA3;
+    --dark-purple: #080925;
+}
+
+body {
+    font-family: var(--body-font-family);
+    background-color: var(--background-color);
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+nav {
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+.navbar-brand {
+    padding-left: 1rem;
+}
+
+
+.nav-item {
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+}
+
+@media screen and (min-width: 1140px) {
+    .container-fluid {
+        width: 90%;
+    }
+    .container {
+        width: 70%;
+    }
+    .nav-item {
+        padding-top: 0.2rem;
+        margin-left: 4rem;
+        letter-spacing: 0.04em;
+    }
+
+    .navbar-brand {
+        padding-left: 0;
+    }
+    
+}
+
+.navbar-toggler {
+    border: none;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    outline: 0;
+}
+
+.ri-menu-2-fill {
+    color: black;
+    padding-right: 0.2rem;
+}
+
+/* .nav-flex {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+}
+
+.products-heading {
+    color: var(--accent-color);
+    font-weight: 300;
+    padding-left: 1rem;
+}
+
+@media screen and (min-width: 1140px) {
+    .products-heading {
+        padding-left: 0;
+    }
+}
+
+/* .product-container {
+    display: flex;
+    flex-flow: wrap;
+} */
+
+@media screen and (min-width: 1140px) {
+    .product-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 8vw;
+        width: 70%;
+    }
+}
+
+.product-img > img {
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+    background-color: white;
+    /* min-height: 250px; */
+    max-height: 100%;
+    min-width: 250px;
+    max-width: 100%;
+
+    object-fit: cover;
+}
+
+.card {
+    /* background: rgba(251, 250, 255, 1); */
+    /* color: white; */
+    /* padding: 1rem; */
+    /* height: 4rem; */
+    border: none;
+    color: black;
+    margin-bottom: 2rem;
+  }
+  .card > img {
+    border-radius: 5px 5px 0px 0px;
+    /* border-radius: 5px; */
+    aspect-ratio: 5/3;
+    object-fit: cover;
+  }
+  
+  .products {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+
+.price-time {
+    font-size: 4rem;
+}
+
+
+
+.filter-search {
+    width: 100%;
+    /* height: 100px; */
+    border-radius: 5px;
+    background-color: white;
+    margin: 2rem auto;
+    align-items: center;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.iconify {
+    color: var(--accent-color);
+}
+
+.like-button {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+}
+
+.heart-icon {
+    margin: 0.45rem;
+}
+
+
+.price-per-month {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.price-per-month > span {
+    font-size: 1rem;
+    color: var(--grey);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--dark-purple);
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1rem;
+    color: var(--grey);
+}
+
+.card-options {
+    color: var(--grey);
+}
+
+.filter-search__h {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.filter-search__option {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark-purple);
+}
+
+.filter-search__button {
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+.btn-bd-primary {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet);
+    --bs-btn-border-color: var(--bd-violet);
+    --bs-btn-border-radius: .5rem;
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+    --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+    --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
